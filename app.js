@@ -15,7 +15,7 @@ const opts = {
 
 let target = 'http://bbs.ngacn.cc/read.php?tid=13540101'
 
-target = 'http://bbs.ngacn.cc/read.php?tid=13545244'
+target = 'http://bbs.ngacn.cc/read.php?tid=13546576'
 
 const options = {
   ...opts,
@@ -32,7 +32,8 @@ if (condition) {
   request(options)
     .then(({ res, content }) => {
       const html = iconv.decode(content, 'gbk')
-      console.log(html)
+
+      new Topic(html, 13546576)
     })
     .catch((err) => {
       console.log(err)

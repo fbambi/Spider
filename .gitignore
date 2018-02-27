@@ -72,5 +72,8 @@ test.py
 # img file
 img/
 
+# log file
+log/*.json
+
 
 
