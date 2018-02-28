@@ -2,7 +2,7 @@
 const fs = require('fs')
 const { promisify } = require('util')
 
-exports.fsAccess = async (...params) => {
+exports.fsExistsAsync = async (...params) => {
   try {
     result = await promisify(fs.access)(...params)
     return true
@@ -11,7 +11,7 @@ exports.fsAccess = async (...params) => {
   }
 }
 
-exports.fsRead = async (...params) => {
+exports.fsReadAsync = async (...params) => {
   try {
     result = await promisify(fs.readFile)(...params)
     return result
